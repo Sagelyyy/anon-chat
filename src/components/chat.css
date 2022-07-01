@@ -1,0 +1,7 @@
+.chat--container{
+    width: 30vw;
+    height: 90vh;
+    border: 3px solid white;
+    margin-left: 30vw;
+    color: white;
+}
