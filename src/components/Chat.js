@@ -4,13 +4,13 @@ import Post from './Post'
 const Chat = () => {
     return (
         <div className="chat--container">
-            <div className='message--container recieved'>
+            <div className='message--container'>
                 <p className='message--username'>Anon</p>
-                <p className='message--text'>Hello World</p>
+                <p className='message--text recieved'>Hello World</p>
             </div>
-            <div className='message--container sent'>
-                <p className='message--username'>Anon</p>
-                <p className='message--text'>Goodbye World</p>
+            <div className='message--container'>
+                <p className='message--username--sent'>Anon</p>
+                <p className='message--text sent'>Goodbye World</p>
             </div>
             <Post />
         </div>
