@@ -1,9 +1,18 @@
 import './chat.css'
+import Post from './Post'
 
 const Chat = () => {
-    return(
+    return (
         <div className="chat--container">
-            <h1>Hello Chat</h1>
+            <div className='message--container recieved'>
+                <p className='message--username'>Anon</p>
+                <p className='message--text'>Hello World</p>
+            </div>
+            <div className='message--container sent'>
+                <p className='message--username'>Anon</p>
+                <p className='message--text'>Goodbye World</p>
+            </div>
+            <Post />
         </div>
     )
 }

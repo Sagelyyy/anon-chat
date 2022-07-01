@@ -1,7 +1,33 @@
 .chat--container{
+    position: relative;
+    text-align: center;
     width: 30vw;
     height: 90vh;
     border: 3px solid white;
     margin-left: 30vw;
     color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.message--container{
+    width: fit-content;
+}
+
+.message--text{
+    width: fit-content;
+}
+
+.sent{
+    align-self: flex-end;
+    background-color: blue;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.recieved{
+    background-color: purple;
+    border-radius: 50px;
+    align-self: flex-start;
+    width: fit-content;
 }
