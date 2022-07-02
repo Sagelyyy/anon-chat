@@ -1,20 +1,37 @@
 import './chat.css'
 import Post from './Post'
 
+import { collection, query, where, onSnapshot } from "firebase/firestore";
+import { db } from '../firebase'
+import { useEffect, useState } from 'react'
+import ChatElements from './ChatElements';
+
 const Chat = () => {
-    return (
-        <div className="chat--container">
-            <div className='message--container'>
-                <p className='message--username'>Anon</p>
-                <p className='message--text recieved'>Hello World</p>
+
+    const [chatData, setChatData] = useState()
+
+    useEffect(() => {
+        const q = query(collection(db, "chat"))
+        const unsubscribe = onSnapshot(q, (querySnapshot) => {
+            const messages = [];
+            querySnapshot.forEach((doc) => {
+                messages.push(doc.data());
+            });
+            messages.sort((a, b) => a.time - b.time).reverse()
+            setChatData(messages)
+        });
+        return unsubscribe
+    }, [])
+
+
+    if (chatData) {
+        return (
+            <div className="chat--container">
+                <ChatElements data={chatData} />
+                <Post />
             </div>
-            <div className='message--container'>
-                <p className='message--username--sent'>Anon</p>
-                <p className='message--text sent'>Goodbye World</p>
-            </div>
-            <Post />
-        </div>
-    )
+        )
+    }
 }
 
 export default Chat

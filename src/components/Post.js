@@ -8,10 +8,7 @@ const Post = () => {
 
     const [post, setPost] = useState()
     const [submitted, setSubmitted] = useState()
-
-    useEffect(() => {
-        console.log(post)
-    },[post])
+    const [ip, setIp] = useState()
 
     useEffect(() => {
       if (submitted) {
@@ -26,6 +23,16 @@ const Post = () => {
       }
   }, [post])
 
+  const getIp = async () => {
+      fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => setIp(data.ip))
+  }
+
+  useEffect(() => {
+    getIp()
+  }, [])
+
   const writePostData = async (post) => {
     const postRef = await addDoc(collection(db, 'chat'), post)
 }
@@ -37,6 +44,7 @@ const Post = () => {
             ...old,
             time: Date.now(),
             id: nanoid(),
+            ip_address: ip
         })
     })
     setSubmitted(true)
