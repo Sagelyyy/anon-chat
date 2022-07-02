@@ -1,5 +1,56 @@
+
 .post--container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
     position: absolute;
     bottom: 0;
-    left: 20%;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.post--text{
+    padding-left: 10px;
+    padding-top: 2px;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85%;
+    background-color: grey;
+    border: 3px solid gray;
+    border-radius: 10px;
+}
+
+.post--button{
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    border: none;
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.post--button:hover{
+    cursor: pointer;
+    background-color: rgb(5, 212, 5);
+}
+
+@media screen and (max-width: 600px) { 
+
+    .post--container{
+        position: absolute;
+        bottom: 0;
+        left: 15vw;
+        padding-bottom: 20px;
+    }
 }

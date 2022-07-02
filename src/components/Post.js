@@ -1,12 +1,12 @@
 import './post.css'
 import { useEffect, useState } from "react"
-import { addDoc, collection, doc, setDoc } from "firebase/firestore"; 
+import { addDoc, collection } from "firebase/firestore"; 
 import { db } from '../firebase';
 import { nanoid } from 'nanoid';
 
-const Post = () => {
+const Post = (props) => {
 
-    const [post, setPost] = useState()
+    const [post, setPost] = useState({data:''})
     const [submitted, setSubmitted] = useState()
     const [ip, setIp] = useState()
 
@@ -23,16 +23,6 @@ const Post = () => {
       }
   }, [post])
 
-  const getIp = async () => {
-      fetch('https://api.ipify.org?format=json')
-      .then(response => response.json())
-      .then(data => setIp(data.ip))
-  }
-
-  useEffect(() => {
-    getIp()
-  }, [])
-
   const writePostData = async (post) => {
     const postRef = await addDoc(collection(db, 'chat'), post)
 }
@@ -44,7 +34,7 @@ const Post = () => {
             ...old,
             time: Date.now(),
             id: nanoid(),
-            ip_address: ip
+            ip_address: props.ip
         })
     })
     setSubmitted(true)
@@ -64,8 +54,8 @@ const Post = () => {
     return(
         <div className="post--container">
             <form onSubmit={handleSubmit}>
-                <input onChange={handleChange} name='data'/>
-                <button>Reply</button>
+                <textarea className='post--text'  value={post.data} onChange={handleChange} name='data'/>
+                <button className='post--button'>Reply</button>
             </form>
         </div>
     )

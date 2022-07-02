@@ -1,12 +1,21 @@
 const ChatElements = (props) => {
 
     const elems = props.data.map((item, i) => {
-        return (
-            <div key={i} className='message--container'>
-                <p className='message--username'>Anon</p>
-                <p className='message--text recieved'>{item.data}</p>
-            </div>
-        )
+        if (item.ip_address === props.ip) {
+            return (
+                <div key={i} className='message--container'>
+                    <p className='message--username--sent'>Anon</p>
+                    <p className='message--text sent'>{item.data}</p>
+                </div>
+            )
+        } else {
+            return (
+                <div key={i} className='message--container'>
+                    <p className='message--username'>Anon</p>
+                    <p className='message--text recieved'>{item.data}</p>
+                </div>
+            )
+        }
     })
 
 
