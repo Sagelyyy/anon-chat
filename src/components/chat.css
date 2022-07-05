@@ -49,7 +49,6 @@
     }
   }
 
-  /* The device with borders */
 .smartphone {
     position: relative;
     width: 360px;
@@ -62,7 +61,6 @@
     margin-top: 5vh;
   }
   
-  /* The horizontal line on the top of the device */
   .smartphone:before {
     content: '';
     display: block;
@@ -76,7 +74,6 @@
     border-radius: 10px;
   }
   
-  /* The circle on the bottom of the device */
   .smartphone:after {
     content: '';
     display: block;
@@ -90,7 +87,6 @@
     border-radius: 50%;
   }
   
-  /* The screen (or content) of the device */
   .smartphone .content {
     width: 360px;
     height: 71vh;

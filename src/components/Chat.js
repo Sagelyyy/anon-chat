@@ -43,17 +43,22 @@ const Chat = () => {
         return (
             <div className="smartphone">
                 <div className='content'>
-                <ChatElements data={chatData} ip={ip} />
-                <Post ip={ip} />
+                    <ChatElements data={chatData} ip={ip} />
+                    <Post ip={ip} />
                 </div>
             </div>
         )
     } else {
         return (
             <div className="chat--container">
-                <span className="material-icons loading">
-                    cached
-                </span>
+                <div className="smartphone">
+                    <div className='content'>
+                        <span className="material-icons loading">
+                            cached
+                        </span>
+                    </div>
+                </div>
+
             </div>
         )
     }
