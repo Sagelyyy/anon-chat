@@ -51,11 +51,16 @@ const Post = (props) => {
           })
         })
       }
+      
+      const handleSettings = () => {
+        props.setShowSettings((old) => !old)
+      }
 
     return(
         <div className="post--container">
             <form onSubmit={handleSubmit}>
-                <textarea className='post--text'  value={post.data} onChange={handleChange} name='data'/>
+                <span onClick={handleSettings} className="material-icons settings">settings</span>
+                <textarea className='post--text' required={true} value={post.data} onChange={handleChange} name='data'/>
                 <button className='post--button'>Reply</button>
             </form>
         </div>

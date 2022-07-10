@@ -1,155 +1,181 @@
-
 .material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 50px;
-    /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-  
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-  }
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 50px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
 
-  span{
-    display: block;
-  }
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
 
-.loading{
-    position: relative;
-    margin-top: 40vh;
-    left: 50%;
-    align-self: center;
-    width: 50px;
-    height: 50px;
-    transform-origin: center;
-    animation: rotation 2s infinite linear;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+span {
+  display: block;
+}
+
+.loading {
+  position: relative;
+  margin-top: 40vh;
+  left: 50%;
+  align-self: center;
+  width: 50px;
+  height: 50px;
+  transform-origin: center;
+  animation: rotation 2s infinite linear;
 }
 
 @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
+  from {
+    transform: rotate(0deg);
   }
 
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 .smartphone {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+  margin-top: 5vh;
+}
+
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -75px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+.smartphone .content {
+  width: 360px;
+  height: 77vh;
+  background: white;
+  overflow-y: scroll;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.message--container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.message--text {
+  width: fit-content;
+}
+
+
+.message--username--sent {
+  margin-left: auto;
+  margin-right: 50px;
+  padding-bottom: 5px;
+}
+
+.message--username {
+  margin-left: 100px;
+  padding-bottom: 5px;
+}
+
+.sent {
+  margin-left: auto;
+  margin-right: 20px;
+  border-radius: 50px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.recieved {
+  text-align: right;
+  margin-left: 20px;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+
+
+  .chat--container {
+    margin-top: 3vh;
     position: relative;
-    width: 360px;
-    height: 640px;
-    margin: auto;
-    border: 16px black solid;
-    border-top-width: 60px;
-    border-bottom-width: 60px;
-    border-radius: 36px;
-    margin-top: 5vh;
+    width: 80vw;
+    height: 90vh;
+    border: 3px solid white;
+    margin-left: 10vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
   }
-  
-  .smartphone:before {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 5px;
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #333;
-    border-radius: 10px;
-  }
-  
-  .smartphone:after {
-    content: '';
-    display: block;
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    left: 50%;
-    bottom: -75px;
-    transform: translate(-50%, -50%);
-    background: #333;
-    border-radius: 50%;
-  }
-  
-  .smartphone .content {
-    width: 360px;
-    height: 71vh;
+
+  .smartphone .content{
+    width: 100vw;
+    height: 95vh;
     background: white;
     overflow-y: scroll;
   }
 
-  .content::-webkit-scrollbar{
+  .smartphone {
+    position: relative;
+    width: 360px;
+    height: 640px;
+    margin: 0;
+    border: 0px black solid;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-radius: 36px;
+  }
+
+  .smartphone:before {
     display: none;
   }
 
-.message--container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.message--text{
-    width: fit-content;
-}
-
-
-.message--username--sent{
-    margin-left: auto;
-    margin-right: 50px;
-    padding-bottom: 5px;
-}
-
-.message--username{
-    margin-left: 100px;
-    padding-bottom: 5px;
-}
-
-.sent{
-    margin-left: auto;
-    margin-right: 20px;
-    border-radius: 50px;
-    padding: 10px;
-    border: 1px solid black;
-}
-
-.recieved{
-    text-align: right;
-    margin-left: 20px;
-    border-radius: 50px;
-    padding: 10px;
-}
-
-@media screen and (max-width: 600px) { 
-
-
-    .chat--container{
-        margin-top: 3vh;
-        position: relative;
-        width: 80vw;
-        height: 90vh;
-        border: 3px solid white;
-        margin-left: 10vw;
-        color: white;
-        display: flex;
-        flex-direction: column;
-    }
+  .smartphone:after {
+    display: none;
+  }
 }

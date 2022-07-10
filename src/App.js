@@ -6,11 +6,12 @@ import { useState } from 'react';
 function App() {
 
   const [bgColor, setBgColor] = useState('#8A8AFF')
+  const [showSettings, setShowSettings] = useState(false)
 
   return (
     <div className="App">
-      <Settings bgColor={bgColor} setBgColor={setBgColor}/>
-      <Chat bgColor={bgColor} setBgColor={setBgColor}/>
+      <Settings showSettings={showSettings} bgColor={bgColor} setBgColor={setBgColor}/>
+      <Chat setShowSettings={setShowSettings} bgColor={bgColor} setBgColor={setBgColor}/>
     </div>
   );
 }

@@ -11,13 +11,14 @@ const Settings = (props) => {
 
     
     return(
+        props.showSettings ?
         <div className="colors-container">
             {colors.map((bg, i) => {
                 return(
                     <div key={i} className='color-item' onClick={() => changeColor(bg)} style={{backgroundColor: bg}}></div>
                 )
             })}
-        </div>
+        </div> : null
     )
 }
 

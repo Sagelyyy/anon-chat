@@ -5,10 +5,32 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 5px;
 }
 
 .color-item{
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) { 
+    .colors-container{
+        position: absolute;
+        z-index: 3;
+        bottom: 6vh;
+        left: 15vw;
+        margin: auto;
+        margin-top: 1vh;
+        max-width: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 10px;
+        background-color: white;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        margin-bottom: 5px;
+    }
 }

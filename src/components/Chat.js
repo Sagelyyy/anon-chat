@@ -19,7 +19,7 @@ const Chat = (props) => {
             querySnapshot.forEach((doc) => {
                 messages.push(doc.data());
             });
-            messages.sort((a, b) => a.time - b.time).reverse()
+            messages.sort((a, b) => a.time - b.time)
             setChatData(messages)
             setLoading(false)
         });
@@ -43,7 +43,7 @@ const Chat = (props) => {
             <div className="smartphone">
                 <div className='content'>
                     <ChatElements data={chatData} ip={ip} />
-                    <Post ip={ip} bgColor={props.bgColor} setBgColor={props.setBgColor}/>
+                    <Post ip={ip} setShowSettings={props.setShowSettings} bgColor={props.bgColor} setBgColor={props.setBgColor}/>
                 </div>
             </div>
         )
