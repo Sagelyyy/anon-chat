@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/anon-chat/static/css/main.22c1b008.css",
+    "main.css": "/anon-chat/static/css/main.cecee842.css",
     "main.js": "/anon-chat/static/js/main.4440acc2.js",
     "static/js/787.96256929.chunk.js": "/anon-chat/static/js/787.96256929.chunk.js",
     "index.html": "/anon-chat/index.html",
-    "main.22c1b008.css.map": "/anon-chat/static/css/main.22c1b008.css.map",
+    "main.cecee842.css.map": "/anon-chat/static/css/main.cecee842.css.map",
     "main.4440acc2.js.map": "/anon-chat/static/js/main.4440acc2.js.map",
     "787.96256929.chunk.js.map": "/anon-chat/static/js/787.96256929.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22c1b008.css",
+    "static/css/main.cecee842.css",
     "static/js/main.4440acc2.js"
   ]
 }
