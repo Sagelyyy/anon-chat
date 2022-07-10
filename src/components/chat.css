@@ -50,7 +50,8 @@ span {
 }
 
 .smartphone {
-  position: relative;
+  position: absolute;
+  left: 40vw;
   width: 360px;
   height: 640px;
   margin: auto;
@@ -155,12 +156,14 @@ span {
 
   .smartphone .content{
     width: 100vw;
-    height: 95vh;
+    height: 90vh;
     background: white;
     overflow-y: scroll;
+    left: 0;
   }
 
   .smartphone {
+    left: 0;
     position: relative;
     width: 360px;
     height: 640px;
