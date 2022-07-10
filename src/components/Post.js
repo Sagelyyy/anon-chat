@@ -34,7 +34,8 @@ const Post = (props) => {
             ...old,
             time: Date.now(),
             id: nanoid(),
-            ip_address: props.ip
+            ip_address: props.ip,
+            bgColor: props.bgColor
         })
     })
     setSubmitted(true)

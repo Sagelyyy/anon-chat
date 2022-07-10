@@ -126,15 +126,14 @@
 .sent{
     margin-left: auto;
     margin-right: 20px;
-    background-color: rgb(127, 127, 238);
     border-radius: 50px;
     padding: 10px;
+    border: 1px solid black;
 }
 
 .recieved{
     text-align: right;
     margin-left: 20px;
-    background-color: rgb(226, 79, 226);
     border-radius: 50px;
     padding: 10px;
 }

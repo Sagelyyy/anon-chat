@@ -1,12 +1,11 @@
 import './chat.css'
 import Post from './Post'
-
-import { collection, query, where, onSnapshot } from "firebase/firestore";
+import { collection, query, onSnapshot } from "firebase/firestore";
 import { db } from '../firebase'
 import { useEffect, useState } from 'react'
 import ChatElements from './ChatElements';
 
-const Chat = () => {
+const Chat = (props) => {
 
     const [loading, setLoading] = useState(false)
     const [chatData, setChatData] = useState()
@@ -44,7 +43,7 @@ const Chat = () => {
             <div className="smartphone">
                 <div className='content'>
                     <ChatElements data={chatData} ip={ip} />
-                    <Post ip={ip} />
+                    <Post ip={ip} bgColor={props.bgColor} setBgColor={props.setBgColor}/>
                 </div>
             </div>
         )
