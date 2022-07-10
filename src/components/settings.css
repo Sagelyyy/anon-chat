@@ -18,7 +18,7 @@
     .colors-container{
         position: fixed;
         z-index: 3;
-        bottom: 10vh;
+        bottom: 5vh;
         left: 15vw;
         margin: auto;
         max-width: 300px;
