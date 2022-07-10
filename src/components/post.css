@@ -59,7 +59,7 @@ form {
 
     .post--container {
         position: fixed;
-        bottom: 0;
+        bottom: 5vh;
         z-index: 10;
     }
 

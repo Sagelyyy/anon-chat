@@ -16,12 +16,11 @@
 
 @media screen and (max-width: 1000px) { 
     .colors-container{
-        position: absolute;
+        position: fixed;
         z-index: 3;
-        bottom: 6vh;
+        bottom: 10vh;
         left: 15vw;
         margin: auto;
-        margin-top: 1vh;
         max-width: 300px;
         display: flex;
         flex-direction: row;
