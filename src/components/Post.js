@@ -8,7 +8,6 @@ const Post = (props) => {
 
     const [post, setPost] = useState({data:''})
     const [submitted, setSubmitted] = useState()
-    const [ip, setIp] = useState()
 
     useEffect(() => {
       if (submitted) {

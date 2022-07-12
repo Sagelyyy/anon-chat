@@ -38,6 +38,7 @@ const Chat = (props) => {
 
     useEffect(() => {
         getIp()
+        console.log(ip)
     }, [])
 
 
