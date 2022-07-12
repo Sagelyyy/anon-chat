@@ -1,11 +1,18 @@
 .colors-container{
     margin: auto;
-    margin-top: 1vh;
-    max-width: 200px;
+    bottom: 26vh;
+    left: 42vw;
+    position: fixed;
+    max-width: 300px;
+    gap: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
     padding: 5px;
+    background-color: white;
 }
 
 .color-item{

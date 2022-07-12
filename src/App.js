@@ -10,8 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Settings showSettings={showSettings} bgColor={bgColor} setBgColor={setBgColor}/>
-      <Chat setShowSettings={setShowSettings} bgColor={bgColor} setBgColor={setBgColor}/>
+      <Chat showSettings={showSettings} setShowSettings={setShowSettings} bgColor={bgColor} setBgColor={setBgColor}/>
     </div>
   );
 }

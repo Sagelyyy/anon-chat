@@ -2,8 +2,9 @@ import './chat.css'
 import Post from './Post'
 import { collection, query, onSnapshot } from "firebase/firestore";
 import { db } from '../firebase'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ChatElements from './ChatElements';
+import Settings from './Settings';
 
 const Chat = (props) => {
 
@@ -27,6 +28,8 @@ const Chat = (props) => {
     }, [])
 
 
+
+
     const getIp = async () => {
         fetch('https://api.ipify.org?format=json')
             .then(response => response.json())
@@ -42,6 +45,7 @@ const Chat = (props) => {
         return (
             <div className="smartphone">
                 <div className='content'>
+                    <Settings showSettings={props.showSettings} bgColor={props.bgColor} setBgColor={props.setBgColor}/>
                     <ChatElements data={chatData} ip={ip} />
                     <Post ip={ip} setShowSettings={props.setShowSettings} bgColor={props.bgColor} setBgColor={props.setBgColor}/>
                 </div>

@@ -90,7 +90,7 @@ span {
 
 .smartphone .content {
   width: 360px;
-  height: 77vh;
+  height: inherit;
   background: white;
   overflow-y: scroll;
 }

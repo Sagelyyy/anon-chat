@@ -20,6 +20,8 @@ form {
 }
 
 .settings{
+    font-size: 40px;
+    user-select: none;
     z-index: 4;
 }
 
