@@ -1,7 +1,7 @@
 import './App.css';
 import Chat from './components/Chat';
-import Settings from './components/Settings';
 import { useState } from 'react';
+import MusicPlayer from './components/MusicPlayer';
 
 function App() {
 
@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <Chat showSettings={showSettings} setShowSettings={setShowSettings} bgColor={bgColor} setBgColor={setBgColor}/>
+      <MusicPlayer />
     </div>
   );
 }

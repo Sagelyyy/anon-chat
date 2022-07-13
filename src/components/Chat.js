@@ -27,9 +27,6 @@ const Chat = (props) => {
         return unsubscribe
     }, [])
 
-
-
-
     const getIp = async () => {
         fetch('https://api.ipify.org?format=json')
             .then(response => response.json())
@@ -38,7 +35,6 @@ const Chat = (props) => {
 
     useEffect(() => {
         getIp()
-        console.log(ip)
     }, [])
 
 
